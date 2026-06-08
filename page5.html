@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка бдительности: Симуляция фишинга</title>
+    <script>
+        function runJsDialog() {
+            alert("Внимание! Вы зашли в интерактивную зону тестирования киберграмотности.");
+            let userName = prompt("Введите ваше имя/логин для идентификации в системе:", "Специалист");
+            
+            if (userName) {
+                let answer = confirm("Приветствую, " + userName + "! Готовы ли вы пройти экспресс-тест на защиту от фишинга?");
+                
+                if (answer) {
+                    let question = prompt("Вам пришло письмо от администрации сервиса с требованием срочно сменить пароль по ссылке из-за утечки. Варианты действий:\n1) Срочно перейти по ссылке и ввести старый и новый пароли\n2) Проверить адрес отправителя, не кликать по ссылке, зайти на официальный сервис вручную\nВведите цифру 1 или 2:");
+                    if (question === "2") {
+                        alert("Отлично, " + userName + "! Ответ верный. Вы распознали фишинговую уловку социальной инженерии. Доступ одобрен!");
+                    } else {
+                        alert("Внимание! Ответ неверный. Вы попались на фишинг. Ваши учетные данные скомпрометированы симулятором!");
+                    }
+                } else {
+                    alert("Тестирование отменено. Помните, что бдительность — это основа информационной безопасности.");
+                }
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #0d1117; color: #c9d1d9; font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">
+    <div style="background-color: #161b22; padding: 30px; border-radius: 10px; max-width: 800px; margin: 0 auto; border: 1px solid #58a6ff;">
+        <h1 style="color: #58a6ff; border-bottom: 2px solid #58a6ff; padding-bottom: 10px;">Сектор 5: Интерактивная проверка бдительности</h1>
+        <p>Для запуска скрипта симуляции фишинговой атаки и тестирования уровня знаний нажмите на кнопку ниже.</p>
+        
+        <p style="text-align: center; margin: 30px 0;">
+            <button onclick="runJsDialog()" style="background-color: #238636; color: white; padding: 12px 25px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">Активировать тест ИБ</button>
+        </p>
+        
+        <hr style="border-color: #58a6ff; margin: 20px 0;">
+        <p><a href="index.html" style="color: #58a6ff; text-decoration: none; font-weight: bold;">← Вернуться на Главную страницу</a></p>
+    </div>
+</body>
+</html>
